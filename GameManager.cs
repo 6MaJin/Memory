@@ -46,8 +46,8 @@ public class GameManager : MonoBehaviour
                 secondSelectedCard.transform.localEulerAngles = new Vector3(-90, 0 , 0);
             }
             firstSelectedCard.transform.localEulerAngles = new Vector3(-90, 0 , 0);
-            firstSelectedCard.targetHeight = 0.04f;
-            secondSelectedCard.targetHeight = 0.04f;
+            firstSelectedCard.targetHeight = 2.04f;
+            secondSelectedCard.targetHeight = 2.04f;
 
             canClick = true;
      }

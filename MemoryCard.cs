@@ -7,7 +7,7 @@ public class MemoryCard : MonoBehaviour
     public int id;
     
     public float targetHeight = 6f;
-    public float targetRotation = - 90f;
+    public float targetRotation = -90f;
 
     public void OnMouseDown()
     {
