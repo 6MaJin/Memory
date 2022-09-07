@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         {
             secondSelectedCard = card;
 
-            canClick = false;
+            
 
             Invoke("CheckMatch", 2);
             
@@ -44,9 +44,8 @@ public class GameManager : MonoBehaviour
             {
                 firstSelectedCard.transform.localEulerAngles = new Vector3(90, 0 , 0);
                 secondSelectedCard.transform.localEulerAngles = new Vector3(90, 0 , 0);
-                Invoke(firstSelectedCard.transform.localEulerAngles = new Vector3(90, 0 , 0));
+                
             }
-            firstSelectedCard.transform.localEulerAngles = new Vector3(-90, 0 , 0);
             firstSelectedCard.targetHeight = 2.04f;
             secondSelectedCard.targetHeight = 2.04f;
 
