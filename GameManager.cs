@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     
-
+    //asdasdasd
     public MemoryCard firstSelectedCard;
     public MemoryCard secondSelectedCard;
 
@@ -36,14 +36,15 @@ public class GameManager : MonoBehaviour
     }
      public void CheckMatch() 
      {
-        if(firstSelectedCard.id == secondSelectedCard.id) 
+        if(firstSelectedCard.id == secondSelectedCard.id & firstSelectedCard != secondSelectedCard) 
             {
                 Destroy(firstSelectedCard.gameObject);
                 Destroy(secondSelectedCard.gameObject);
             } else
             {
-                firstSelectedCard.transform.localEulerAngles = new Vector3(-90, 0 , 0);
-                secondSelectedCard.transform.localEulerAngles = new Vector3(-90, 0 , 0);
+                firstSelectedCard.transform.localEulerAngles = new Vector3(90, 0 , 0);
+                secondSelectedCard.transform.localEulerAngles = new Vector3(90, 0 , 0);
+                Invoke(firstSelectedCard.transform.localEulerAngles = new Vector3(90, 0 , 0));
             }
             firstSelectedCard.transform.localEulerAngles = new Vector3(-90, 0 , 0);
             firstSelectedCard.targetHeight = 2.04f;

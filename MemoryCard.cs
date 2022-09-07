@@ -16,6 +16,7 @@ public class MemoryCard : MonoBehaviour
     }
     private void Update() 
     {
+        float targetHeight = Mathf.MoveTowards(3, 0, 0);
         float heightValue = Mathf.MoveTowards(transform.position.y, targetHeight, 1 * Time.deltaTime);
     }
 }
