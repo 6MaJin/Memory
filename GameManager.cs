@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
         if (canClick == false)
             return;
 
-        card.transform.localEulerAngles = new Vector3(-90, 0, 0);
-        card.targetHeight = 0.5f;
+        card.targetRotation = 90;
+        card.targetHeight = 1.5f;
 
         if(firstSelectedCard == null) {
             firstSelectedCard = card;
@@ -27,10 +27,7 @@ public class GameManager : MonoBehaviour
         else
         {
             secondSelectedCard = card;
-
-            
-
-            Invoke("CheckMatch", 2);
+            Invoke("CheckMatch", 1);
             
         }
     }
@@ -42,13 +39,14 @@ public class GameManager : MonoBehaviour
                 Destroy(secondSelectedCard.gameObject);
             } else
             {
-                firstSelectedCard.transform.localEulerAngles = new Vector3(90, 0 , 0);
-                secondSelectedCard.transform.localEulerAngles = new Vector3(90, 0 , 0);
-                
-            }
-            firstSelectedCard.targetHeight = 2.04f;
-            secondSelectedCard.targetHeight = 2.04f;
+                firstSelectedCard.transform.localEulerAngles = new Vector3(-90, 0, 0);
+                secondSelectedCard.transform.localEulerAngles = new Vector3(-90, 0, 0);
 
+                firstSelectedCard.targetHeight = 0.05f;
+                secondSelectedCard.targetHeight = 0.05f;
+            }
+            firstSelectedCard = null;
+            secondSelectedCard = null;
             canClick = true;
      }
 }
